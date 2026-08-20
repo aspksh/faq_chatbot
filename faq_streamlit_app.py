@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer, util
 import numpy as np 
 import streamlit as st 
  
-data = pd.read_csv('data_path') 
+data = pd.read_csv('clothing_order_faq') 
 df = pd.DataFrame(data) 
 print('Total FAQs loaded: ',len(df)) 
 print(df.head()) 
