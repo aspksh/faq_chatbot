@@ -70,15 +70,19 @@ if user_input:
         
     result = get_answer(user_input)
 
-    with st.chat_message("assistant"):
+    if result['found']:
+        answer = result['answer']
 
-        if result['found']:
-            answer = result['answer']
-        else:
-            answer = result['answer']
-            st.write(f"(Confidence was only {result['confidence']:.3f})")
-    
-    st.session_state.messages.append({
-        "role": "assistant",
-        "content": answer
-    })
+    else:
+        answer = result['answer']
+
+    with st.chat_message("assistant"):
+         st.write(answer)
+ 
+         if not result['found']:
+             st.write(f"(Confidence was only {result['confidence']:.3f})")
+ 
+     st.session_state.messages.append({
+         "role": "assistant",
+         "content": answer
+     })
