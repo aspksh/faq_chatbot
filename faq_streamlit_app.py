@@ -82,7 +82,7 @@ if user_input:
          if not result['found']:
              st.write(f"(Confidence was only {result['confidence']:.3f})")
  
-     st.session_state.messages.append({
+    st.session_state.messages.append({
          "role": "assistant",
          "content": answer
-     })
+         })
