@@ -79,8 +79,7 @@ if user_input:
     with st.chat_message("assistant"):
          st.write(answer)
  
-         if not result['found']:
-             st.write(f"(Confidence was only {result['confidence']:.3f})")
+        
  
     st.session_state.messages.append({
          "role": "assistant",
