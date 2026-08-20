@@ -49,12 +49,12 @@ def get_answer(user_query, threshold = 0.4):
 
 
 st.title("FAQ Chatbot")
-if 'messages' not in st.session_state:
+if "messages" not in st.session_state:
     st.session_state.messages = []
     
 for "message" in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.write(message[content])
+        st.write(message["content"])
         
 user_input = st.chat_input("Ask your question...")
 
