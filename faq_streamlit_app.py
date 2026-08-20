@@ -77,7 +77,8 @@ if user_input:
         else:
             st.write(result['answer'])
             st.write(f"(Confidence was only {result['confidence']:.3f})")
+    
     st.session_state.messages.append({
         "role": "assistant",
-        "content": "answer"
+        "content": answer
     })
